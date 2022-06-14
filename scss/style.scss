@@ -1,0 +1,297 @@
+@import 'fonts';
+@import 'vars';
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+*, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background-color: $navColor;
+    cursor: pointer;
+}
+
+body {
+    //background-color: $backgroundColor;
+}
+
+
+//=======================================================================================================
+//CSS
+
+.wrapper {
+    
+}
+
+.container {
+    min-width: $maxWidthContainer;
+    padding: 24px 16px;
+}
+
+nav {
+    display: flex;
+    column-gap: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 288px;
+}
+
+.nav--margin-bottom {
+    margin-bottom: 24px;
+}
+
+.feedback {
+    display: flex;
+    column-gap: 16px;
+}
+
+.forms {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.forms__text {
+    line-height: 24px;
+}
+
+
+.nav__feedback {
+    margin-left: auto;
+}
+
+.forms__repair {
+    position: relative;
+    margin-left: 20px;
+    &::before {
+        position: absolute;
+        content: '';
+        background: #EAEAEA;
+        width: 2px;
+        height: 32px;
+        border-radius: 1px;
+        left: -20px;
+        top: 9%;
+    }
+}
+
+.nav__tittle {
+    font-family: 'TT Lakes';
+    font-weight: bold;
+    line-height: 40px;
+    font-size: 1.75rem;
+}
+
+.services__tittle {
+    margin-bottom: 24px;
+}
+
+.services__items {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    justify-content: space-between;
+}
+
+.services__item{
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 12px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    max-height: 40px;
+    flex: 1 0 auto;
+}
+
+.services__items {
+    margin-bottom: 6%;
+}
+
+.about-us {
+    font-family: 'TT Lakes';
+    font-size: 0.85rem;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    font-weight: 00;
+
+}
+
+.about-us__container {
+    min-width: 289px;
+}
+
+.about-us__overflow {
+    overflow: hidden;
+    max-height: 90px;
+    margin-bottom: 15px;
+}
+
+.about-us__text {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.about-us__button {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+@media (min-width: 320px) {
+    .nav__tittle {
+        display: none;
+    }
+    .nav__feedback {
+        display: none;
+    }
+    .nav__forms {
+        margin-left: auto;
+    }
+    .forms__text {
+        display: none;
+    }
+
+    .services__item--hidden1 {
+        display: none;
+    }
+
+    .services__item--hidden2 {
+        display: block;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .nav__tittle {
+        display: none;
+    }
+    .nav__feedback {
+        display: block;
+    }
+
+    .nav__forms {
+        margin-left: 0;
+    }
+
+    .forms__text {
+        display: none;
+    }
+
+    .nav__button{
+        position: relative;
+        margin-right: 20px;
+        display: block;
+        &::before {
+            position: absolute;
+            content: '';
+            background: #EAEAEA;
+            width: 2px;
+            height: 32px;
+            border-radius: 1px;
+            right: -19px;
+            top: 9%;
+        }
+    }
+
+}
+
+@media (min-width: 1120px) {
+
+    .container {
+        max-width: 1089px;
+        padding: 42px 33px;
+    }
+
+    .services__tittle--hidden {
+        display: none;
+    }
+
+    .services__item--hidden1 {
+        display: block;
+    }
+
+    .services__item--hidden2 {
+        display: none;
+    }
+
+    .nav__feedback {
+        display: none;
+    }
+
+    .forms__text {
+        display: block;
+    }
+
+    .button__icon {
+        display: none;
+    }
+
+    .nav__logo {
+        display: none;
+    }
+
+    .nav__tittle {
+        display: block;
+    }
+
+    .nav__button {
+
+        margin-left: auto;
+        flex: 1 1 auto;
+        &::before {
+            display: none;
+        }
+    }
+
+
+    .forms__repair {
+        margin-left: 0;
+        margin-right: 10px;
+        &::before {
+            display: none;
+        }
+    }
+
+    .services__items {
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+    
+}
+
+
+
+
+
+
