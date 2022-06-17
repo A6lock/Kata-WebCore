@@ -6,6 +6,7 @@ html {
     box-sizing: border-box;
     font-family: 'TT Lakes';
     font-size: 16px;
+    height: 100%;
 }
 
 *, *::before, *::after {
@@ -19,8 +20,6 @@ html {
 
 li {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 a {
@@ -33,26 +32,23 @@ a {
     }
 }
 
+
+
 button {
     border: none;
     cursor: pointer;
     background:transparent;
 }
 
-.all-content {
-    width: 100%;
-    background-color:  #fff;
-
-}
 
 .wrapper {
+    height: 100%;
     max-width: 1120px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     background-color:#F8F8F8;   
-    flex: 0 0 33,333%;
 }
 
 main {
@@ -188,9 +184,6 @@ h1 {
         border: 2px solid #B8FFEC;
         background-color:#fff
     }
-
-    
-
 }
 
 
@@ -202,10 +195,6 @@ h1 {
     line-height: 24px;
     letter-spacing: -0.5px;
 }
-
-
-
-
 
 .about-us {
     font-family: 'TT Lakes';
@@ -235,15 +224,6 @@ h1 {
     object-fit: cover;
 }
 
-
-
-
-//.about-us__text {
-//    &:not(:last-child) {
-//        margin-bottom: 20px;
-//    }
-//}
-
 .about-us__button {
     font-family: 'TT Lakes';
     font-size: 1rem;
@@ -266,17 +246,9 @@ h1 {
 .about-us__text {
 margin-bottom: 20px;
 }
-//.about-us {
-//    display: flex;
-//    flex-direction: row;
-//    flex-wrap: nowrap;
-//}
 
 @media (min-width: 320px) {
     
-//    .header__tittle {
-//        display: none;
-//    }
 
 
     .services__item--hidden1 {
@@ -344,7 +316,7 @@ margin-bottom: 20px;
 }
 
 .about-us__container {
-    padding: 0 0 0 25px;
+    padding: 0 0 0 20px;
 }
 
 .about-us__overflow {
@@ -443,6 +415,9 @@ h1 {
     background-color:  #F8F8F8;
 }
 
+.about-us__container {
+    padding: 0 0 0 20px;
+}
 
 
 .services__tittle--hidden {
@@ -454,6 +429,10 @@ h1 {
     width: 531.35px;
     height: 307px;
 
+}
+
+.about-us__container {
+    padding: 0 0 0 31px;
 }
 
 }
