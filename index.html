@@ -12,14 +12,13 @@
 <body>
     <div class="wrapper">
 
-        <header class="header">
-            <h1 class="header__tittle">Услуги и сервисы</h1>
+        <header class="header header-container">
             <button class="header__button">
                 <img class="header__burger-icon" src="icons/burger-icon.svg" alt="Меню">
             </button>
-            <div class="header__logo">
+            <a href="#" class="header__logo">
                 <img class="logo__image" src="image/logo.svg" alt="Логотип">
-            </div>
+            </a>
             <div class="header__feedback feedback">
                 <button class="feedback__call">
                     <img src="icons/call-icon.svg" alt="Звонок">
@@ -32,12 +31,12 @@
                 </button>
             </div>
             <div class="header__forms forms">
-                <span class="forms__text">Оставить заявку</span>
                 <button class="forms__repair">
+                    <span class="forms__text">Оставить заявку</span>
                     <img src="icons/repair_icom.svg" alt="Заявка на ремонт">
                 </button>
-                <span class="forms__text">Статус ремонта</span>
                 <button class="forms__status">
+                    <span class="forms__text">Статус ремонта</span>
                     <img src="icons/checkstatus_icon.svg" alt="Статус заявки">
                 </button>
             </div>
@@ -46,8 +45,21 @@
 
         <main>
 
+            <section class="head head--hidden">
+                <h1 class="head__tittle head__tittle--hidden">Услуги и сервисы</h1>
+                <div class="head__forms">
+                    <button class="forms__repair label">
+                        <span class="forms__text">Оставить заявку</span>
+                        <img src="icons/repair_icom.svg" alt="Заявка на ремонт">
+                    </button>
+                    <button class="forms__status label">
+                        <span class="forms__text">Статус ремонта</span>
+                        <img src="icons/checkstatus_icon.svg" alt="Статус заявки">
+                    </button>
+                </div>
+            </section>
+
             <nav class="services">
-                <h1 class="services__tittle services__tittle--hidden services__tittle--padding">Услуги и сервисы</h1>
                 <ul class="services__items">
                     <li class="services__item services__item--hidden1">
                         <a href="#" class="services__link">Ремонтируемые бренды</a>
