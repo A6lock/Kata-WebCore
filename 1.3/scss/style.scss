@@ -1,0 +1,431 @@
+@import '_fonts';
+
+html {
+    box-sizing: border-box;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    height: auto;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #7E7E82;
+
+    &:active {
+        -webkit-tap-highlight-color: transparent;
+        
+    }
+}
+
+
+
+button {
+    border: none;
+    cursor: pointer;
+    background:transparent;
+}
+
+
+.wrapper {
+    height: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color:#F8F8F8;   
+}
+
+main {
+    flex-grow: 1;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+//=======================================================================================================
+//CSS
+
+.header__tittle {
+    font-family: 'TT Lakes';
+    font-weight: bold;
+    line-height: 40px;
+    font-size: 1.75rem;
+    display: none;
+}
+
+.header {
+    display: flex;
+    background-color: #fff;
+    padding: 18px 16px;
+    column-gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 288px;
+}
+
+
+.header__feedback {
+    display: none;
+}
+
+.forms__text {
+    display: none;
+}
+
+.header__forms {
+    margin-left: auto;
+}
+
+
+.forms {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.forms__repair {
+    position: relative;
+    margin-left: 20px;
+    &::before {
+        position: absolute;
+        content: '';
+        background: #EAEAEA;
+        width: 2px;
+        height: 32px;
+        border-radius: 1px;
+        left: -20px;
+        top: 9%;
+    }
+}
+
+.forms__text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+h1 {
+    position: relative;
+    &::before{
+        content: "";
+        display: inline-block;
+        background: url(../icons/Title-icon.svg);
+        height: 40px;
+        width: 4px;
+        vertical-align: top;
+        position: absolute;
+        left: -1px;
+        top: 20px;
+
+
+    }
+}
+
+.head--hidden {
+    display: none;
+}
+
+.services__tittle--padding {
+    padding: 25px 0 0 16px;
+}
+
+.services__container {
+    display: block;
+    margin: 0 auto;
+    max-width: 1056px;
+    padding: 0 16px;
+}
+
+.services__items {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    //column-gap: 30px;
+    padding-left: 18px;
+    max-width: 1056px;
+    justify-content: flex-start;
+    flex: 1 0 auto;
+    margin-bottom: 24px;
+}
+
+.services__item{
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 17px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    text-align: center;
+    flex: 0 0 auto;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    ;
+
+    &:hover {
+        border: 2px solid #B8FFEC;
+        background-color:#fff
+    }
+}
+
+
+
+
+.item__link {
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+}
+
+.about-us {
+    font-family: 'TT Lakes';
+    font-size: 0.9rem;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.about-us__container {
+    padding: 0 16px;
+    min-width: 289px;
+}
+
+.about-us__overflow {
+    margin-bottom: 15px;
+}
+
+.about-us__photo-cps {
+    
+    width: 320px;
+    height: 176px;
+    object-fit: cover;
+}
+
+.about-us__button {
+    font-family: 'TT Lakes';
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 14px;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 11px;
+        background-image: url(../icons/check-down_icon.svg);
+        vertical-align: center;
+        margin: 0 13px 0 10px;
+    }
+
+}
+
+.about-us__text {
+margin-bottom: 20px;
+}
+
+@media (min-width: 320px) {
+    .services__item--hidden1 {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+.header {
+    padding: 24px 24px;
+}
+
+.header__feedback {
+    display: block;
+    flex-grow: 1;
+}
+
+.feedback {
+    display: flex;
+    column-gap: 16px;
+    justify-content: flex-end;
+}
+
+
+.header__button {
+    position: relative;
+    margin-right: 20px;
+    display: block;
+        &::before {
+        position: absolute;
+        content: '';
+        background: #EAEAEA;
+        width: 2px;
+        height: 32px;
+        border-radius: 1px;
+        right: -19px;
+        top: 9%;
+    }
+}
+
+.services__container {
+    padding: 0 24px;
+}
+
+.about-us {
+    flex-direction:row;
+    flex: 1 1 50%;
+    justify-content: space-between;
+    align-content: center;
+    column-gap: 36px;
+}
+
+.about-us__container {
+    padding: 0 0 0 20px;
+}
+
+.about-us__overflow {
+    max-width: auto;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.about-us__photo-container {
+    padding-right: 25px;
+}
+
+.about-us__photo-cps {
+    
+    width: 360px;
+    height: 208px;
+}
+
+}
+
+
+@media (min-width: 1120px) {
+
+
+.header {
+    //background-color: #F8F8F8;
+    //padding: 42px 33px 4px;]
+    display: none;
+}
+
+.head--hidden {
+    display: block;
+}
+
+.head {
+    padding-top: 47px;
+    display: flex;
+    width: 94%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.head__tittle {
+    flex: 1 0 auto;
+}
+
+.head__forms {
+    display: flex;
+    column-gap: 32px;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.header__button {
+    display: none;
+}
+
+.header__tittle {
+    display: block;
+}
+
+
+.header__logo {
+    display: none;
+}
+
+.header__feedback {
+    display: none;
+}
+
+.forms__repair {
+    margin-left: 0;
+    &::before {
+        display: none;
+    }
+}
+
+h1 {
+    position: relative;
+    &::before{
+        content: "";
+        left: -33px;
+        top: -1px;
+
+
+    }
+}
+
+
+
+.forms__text {
+    display: block;
+}
+
+.services__container {
+    padding: 0 34px;
+}
+
+.services__items {
+    padding-left: 33px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.all__content {
+    background-color:  #F8F8F8;
+}
+
+.about-us__container {
+    padding: 0 0 0 20px;
+}
+
+
+.services__tittle--hidden {
+        display: none;
+}
+
+.about-us__photo-cps {
+
+    width: 531.35px;
+    height: 307px;
+
+}
+
+.about-us__container {
+    padding: 0 0 0 31px;
+}
+
+}
