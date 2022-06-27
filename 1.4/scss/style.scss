@@ -5,6 +5,7 @@ html {
     font-family: 'TT Lakes';
     font-size: 16px;
     background-color: #F2F2F2;
+    height: 100%;
 }
 
 *, *::before, *::after {
@@ -39,37 +40,31 @@ button {
 }
 
 .wrapper {
-    max-width: 1120px;
     margin: right;
-    height: auto;
-
+    height: 100%;
 }
 
 .wrapper__menu {
-    width: 320px;
     height: 100vh;
-    background-color: #FFFFFF;
-    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
-    16px 0px 52px rgba(14, 24, 80, 0.2);
+    width: 320px;
 }
 
-.menu__container {
-    height: 100vh;
-}
 
 //=========================================================
 
 .menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 320px;
     background-color: #fff;
-    max-height: 1024px;    
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
+    min-height: 100%;
 }
 
 .main {
-    flex: 1 1 722px;
+    flex: 1 1 33.333333%;
 }
 
 .header {
@@ -102,17 +97,18 @@ button {
 
     margin: 0 auto;
     width: 85%;
+    max-height: 722px;
 }
 
 .nav {
-    max-height: 720px;
+    flex-grow: 1;
 }
 
 .nav__items {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    flex: 1 0 12.5%;
+    flex: 1 1 12.5%;
     height: 450px;
 }
 

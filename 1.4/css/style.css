@@ -28,6 +28,7 @@ html {
   font-family: 'TT Lakes';
   font-size: 16px;
   background-color: #F2F2F2;
+  height: 100%;
 }
 
 *, *::before, *::after {
@@ -60,21 +61,13 @@ button {
 }
 
 .wrapper {
-  max-width: 1120px;
   margin: right;
-  height: auto;
+  height: 100%;
 }
 
 .wrapper__menu {
+  height: 100vh;
   width: 320px;
-  height: 100vh;
-  background-color: #FFFFFF;
-  -webkit-box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-          box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-}
-
-.menu__container {
-  height: 100vh;
 }
 
 .menu {
@@ -85,18 +78,20 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 320px;
   background-color: #fff;
-  max-height: 1024px;
+  -webkit-box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+          box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  min-height: 100%;
 }
 
 .main {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 722px;
-          flex: 1 1 722px;
+      -ms-flex: 1 1 33.333333%;
+          flex: 1 1 33.333333%;
 }
 
 .header {
@@ -142,10 +137,13 @@ button {
 .main__container {
   margin: 0 auto;
   width: 85%;
+  max-height: 722px;
 }
 
 .nav {
-  max-height: 720px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .nav__items {
@@ -160,8 +158,8 @@ button {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 12.5%;
-          flex: 1 0 12.5%;
+      -ms-flex: 1 1 12.5%;
+          flex: 1 1 12.5%;
   height: 450px;
 }
 
